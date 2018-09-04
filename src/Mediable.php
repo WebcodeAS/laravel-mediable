@@ -44,7 +44,7 @@ trait Mediable
     public function media()
     {
         return $this->morphToMany(config('mediable.model'), 'mediable')
-            ->withPivot('tag', 'order')
+            ->withPivot(array_merge(['tag', 'order'], config('mediable.additional_pivot_fields')))
             ->orderBy('order');
     }
 

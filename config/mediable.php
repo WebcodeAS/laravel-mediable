@@ -9,6 +9,15 @@ return [
     'model' => Plank\Mediable\Media::class,
 
     /*
+     * Additional Mediable Pivot Fields
+     * 
+     */
+
+    'additional_pivot_fields' => [
+        
+    ],
+
+    /*
      * Filesystem disk to use if none is specified
      */
     'default_disk' => 'public',
